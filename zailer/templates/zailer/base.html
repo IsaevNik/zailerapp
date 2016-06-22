@@ -1,0 +1,165 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="ru">
+	
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Zailer Tuning</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link href="{% static 'zailer/css/style.css' %}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="{% static 'zailer/css/themes/theme.css' %}" id="color-skins"/>
+        
+</head>
+	<body>
+
+        <!-- Start Preloader -->
+        <div id="preloader">
+            <div class="loader">  
+               <img src="{% static 'zailer/img/assets/loader.gif' %}" alt="ZAILER TUNING COMPANY"> 
+            </div>
+        </div>
+        <!-- End Preloader -->
+        <!-- Start Header -->
+        <header>
+            <nav class="navbar navbar-default navbar-alt" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                        <span class="sr-only">Навигатор</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand to-top" rel="home" href="/">
+                            <img src="{% static 'zailer/img/assets/logo-white.png' %}" alt="ZAILER TUNING COMPANY" class="logo-big">
+                            <img src="{% static 'zailer/img/assets/logo-dark.png' %}" alt="ZAILER TUNING COMPANY" class="logo-small">
+                        </a>
+                    </div>
+
+                    {% block nav %}{% endblock %}
+                    
+                </div><!-- /.container -->
+            </nav>
+        </header>
+
+        {% block headerbackground %}{% endblock %}
+
+        <div class="site-wrapper content">
+
+        {% block content %}{% endblock %}
+        <!-- Start Footer 1 -->
+            <footer id="footer">
+
+                <div class="footer-widgets">
+                    <div class="container"> 
+                            
+                            <div class="col-md-3 col-sm-6 col-twitter">
+                                <h4>Последние новости</h4>
+                                <ul class="footer-news">
+                                    <li><a href="#">Новость #1</a></li>
+                                    <li><a href="#">Новость #2</a></li>
+                                    <li><a href="#">Новость #3</a></li>
+                                    <li><a href="#">Новость #4</a></li>
+                                    <li><a href="#">Новость #5</a></li>
+                                </ul> 
+                            </div>
+                            
+                            <div class="col-md-3 col-sm-6 col-footer">
+                                <div class="subscription">
+                                    <h4>Рассылка</h4>
+                                    <p>Поделитесь ссылкой с друзьями!</p> 
+                                    
+                                    <form action="contact.php" method="post" id="subscribe-form" role="form">
+                                        <div class="form-validation alert"></div>
+                                        <div class="form-group subscribe-form-input">
+                                            <input type="email" name="email" id="subscribe-form-email" class="footer-subscribe-input" placeholder="Ваш электронный адрес" autocomplete="off" />      
+                                            <button class="subscribe-form-submit btn-primary-full" data-loading-text="Загружаемся...">Поделиться</button>
+                                        </div>
+                                    </form>
+                                    
+                                </div>
+                            </div> 
+                            
+                            <div class="col-md-3 col-sm-6 col-footer">
+                                <div class="contact">
+                                    <h4>О компании</h4>
+                                    <ul class="contact-details">
+                                        <li><p><i class="icon ion-ios-location-outline highlight"></i>Москва, ул. Федоскинская дом 12</p></li>
+                                        <li><p><i class="icon ion-ios-telephone highlight"></i> +7(495) 723 28 23</p></li>
+                                        <li><p><i class="icon ion-android-mail highlight"></i> <a href="#">www.zailer.ru</a></p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-sm-6 col-footer">
+                                <h4>ZAILER</h4>
+                                <p>Бюджет на размещение, согласно Ф.Котлеру, директивно отталкивает формирование имиджа. </p>
+                                <p>Идеология выстраивания бренда неверно тормозит креативный показ баннера. </p>
+                            </div>
+                             
+                    </div>
+                </div><!-- End Footer Widgets -->
+                
+                <div class="footer-copyright">
+                    <div class="container">
+                        <div class="row">
+                                
+                            <div class="col-md-6 col-sm-12">
+                                <p>ZAILER TUNING COMPANY© 2013-2016</p>
+                            </div>
+                            <!--
+                            <div class="col-md-6 col-sm-12">
+                                <ul id="social-icons">
+                                    <li><a href="#"><i class="icon ion-social-twitter"></i></a></li>    
+                                    <li><a href="#"><i class="icon ion-social-facebook"></i></a></li> 
+                                    <li><a href="#"><i class="icon ion-social-googleplus"></i></a></li> 
+                                    <li><a href="#"><i class="icon ion-social-instagram-outline"></i></a></li> 
+                                    <li><a href="#"><i class="icon ion-social-pinterest"></i></a></li>  
+                                    <li><a href="#"><i class="icon ion-social-skype"></i></a></li> 
+                                    <li><a href="#"><i class="icon ion-social-linkedin"></i></a></li> 
+                                    <li><a href="#"><i class="icon ion-social-dropbox"></i></a></li> 
+                                    <li><a href="#"><i class="icon ion-social-vimeo"></i></a></li> 
+                                    <li><a href="#"><i class="icon ion-social-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                            -->
+                        </div>
+                    </div>
+                </div><!-- End Footer Copyright -->
+                
+            </footer>
+            <!-- End Footer 1 -->
+            
+            <!-- Start Back To Top -->
+            <a id="back-to-top"><i class="icon ion-chevron-up"></i></a>
+            <!-- End Back To Top -->
+                      
+        </div> <!-- End Site Wrapper -->
+        
+        <!-- jQuery -->
+        <script src="{% static 'zailer/js/plugins/jquery.min.js' %}"></script>
+        <script src="{% static 'zailer/js/plugins/moderniz.min.js' %}"></script>
+        <script src="{% static 'zailer/js/plugins/smoothscroll.min.js' %}"></script>
+        <script src="{% static 'zailer/js/plugins/revslider.min.js' %}"></script> 
+        <script src="{% static 'zailer/js/plugins/bootstrap.min.js' %}"></script>
+        <script src="{% static 'zailer/js/plugins/waypoints.min.js' %}"></script>
+        <script src="{% static 'zailer/js/plugins/parallax.min.js' %}"></script>
+        <script src="{% static 'zailer/js/plugins/easign1.3.min.js' %}"></script> 
+        <script src="{% static 'zailer/js/plugins/cubeportfolio.min.js' %}"></script>
+        <script src="{% static 'zailer/js/plugins/owlcarousel.min.js' %}"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        <script src="{% static 'zailer/js/plugins/gmap3.min.js' %}"></script>
+        <script src="{% static 'zailer/js/plugins/wow.min.js' %}"></script>
+        <script src="{% static 'zailer/js/plugins/counterup.min.js' %}"></script> 
+        <script src="{% static 'zailer/js/scripts.js' %}"></script> 
+
+        {% block addscript %}{% endblock %}
+        
+</body>
+
+</html>

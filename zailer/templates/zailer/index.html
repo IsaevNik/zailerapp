@@ -1,0 +1,683 @@
+{% extends "zailer/base.html" %}
+{% load staticfiles %}
+
+    {% block nav %}
+    <div class="collapse navbar-collapse" id="main-nav">
+        <ul class="nav navbar-nav  navbar-right">
+            
+            <li><a class="to-top">Главная</a></li>
+            <li class="to-section"><a href="#about">О компании</a></li>
+            <li class="to-section"><a href="#auto">Тюнинг</a></li>
+            
+            <li class="dropdown">
+                <span class="dropdown-toggle" data-toggle="dropdown">Услуги<b class="caret"></b></span>
+                <ul class="dropdown-menu" role="menu">
+                    <!--<li class="active"><a href="#">Разработка</a></li>-->
+                    <li><a href="/service1.html">1</a></li>
+                    <li><a href="/service2.html">2</a></li>
+                    <li><a href="/service3.html">3</a></li> 
+                    <li><a href="/service4.html">4</a></li>
+                    <li><a href="/service5.html">5</a></li>
+                    <li><a href="/service6.html">6</a></li>
+                    <li><a href="/service6.html">7</a></li> 
+                    <li><a href="/service6.html">8</a></li>
+                    <li><a href="/service6.html">9</a></li>
+                    <li><a href="/service6.html">10</a></li>
+                    <li><a href="/service6.html">11</a></li> 
+                    <li><a href="/service6.html">12</a></li>
+                </ul>
+            </li> 
+            <li class="to-section"><a href="/auto">Авто в продаже</a></li>
+            <!--
+            <li class="dropdown">
+                <span class="dropdown-toggle" data-toggle="dropdown">Новости <b class="caret"></b></span>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="blog.html">Список новостей</a></li>
+                    <li><a href="blog-single.html">Описание новости</a></li>    
+            </li> 
+            -->
+            <li class="to-section"><a href="#contact">Контакты</a></li>
+            <!--
+            <li><a class="social-icon" href="#"><i class="icon icon-social-twitter"></i></a></li>
+            <li><a class="social-icon" href="#"><i class="icon icon-social-facebook"></i></a></li>
+            -->
+        </ul>
+    </div><!-- /.navbar-collapse -->
+    {% endblock %}
+	
+        <!-- End Header -->
+        
+        <!-- Start Home Revolution Slider Parallax Section -->
+    {% block headerbackground %}
+    <section id="home-revolution-slider">
+        <div class="hero">
+            <div class="tp-banner-container">
+                <div class="tp-banner">
+                    <ul>
+                        <!-- SLIDE 1 -->
+                        <li data-transition="fade" data-slotamount="7" data-masterspeed="2000" data-thumb="{% static 'zailer/img/backgrounds/bg-home-fullscreen.jpg' %}" data-delay="10000"  data-saveperformance="on" data-title="Range Rover">
+                            <img src="{% static 'zailer/img/backgrounds/bg-home-fullscreen.jpg' %}" alt="1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+
+                                <!-- Home Heading -->
+                                <div class="tp-caption sft"
+                                    data-x="center"  
+                                    data-y="260"
+                                    data-speed="1200"
+                                    data-start="1100"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="300"
+                                    style="z-index: 4; max-width: auto; max-height: auto; white-space:normal;">
+                                    <h2 class="home-heading op-1">ПРЕМЬЕРА ОТ ZAILER</h2>
+                                </div>
+                                <!-- Home Subheading -->
+                                <div class="tp-caption home-subheading sft "
+                                    data-x="center" 
+                                    data-y="360" 
+                                    data-speed="1200"
+                                    data-start="1350"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="300"
+                                    style="z-index: 4; max-width: auto; max-height: auto; white-space:normal;">
+                                    <div class="op-1">Рейстайлинг Range Rover Vogue 2016-2017</div>
+                                </div>
+                                <!-- Home Button -->
+                                <div class="tp-caption home-button sft fadeout"
+                                    data-x="center" 
+                                    data-y="400" 
+                                    data-speed="1200"
+                                    data-start="1550"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="300"
+                                    style="z-index: 4; max-width: auto; max-height: auto; white-space:normal;">
+                                    <div class="op-1"><a href="/rover" class="btn btn-primary btn-scroll">Range Rover</a></div>
+                                </div>
+
+                        </li>
+
+                        <!-- SLIDE 2 -->
+                        <li data-transition="fade" data-slotamount="7" data-masterspeed="2000" data-thumb="{% static 'zailer/img/backgrounds/bg-1.jpg' %}" data-delay="10000"  data-saveperformance="on" data-title="Range Rover Vogue">
+                            <img src="{% static 'zailer/img/backgrounds/bg-1.jpg' %}" alt="1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+
+                                <!-- Home Heading -->
+                                <div class="tp-caption sft"
+                                    data-x="center"  
+                                    data-y="260"
+                                    data-speed="1200"
+                                    data-start="1100"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="300"
+                                    style="z-index: 4; max-width: auto; max-height: auto; white-space:normal;">
+                                    <h2 class="home-heading op-2">Range Rover Vogue <br> AUTOBIOGRAPHY 2016</h2>
+                                </div>
+                                <!-- Home Subheading -->
+                                <div class="tp-caption home-subheading sft fadeout"
+                                    data-x="center" 
+                                    data-y="360" 
+                                    data-speed="1200"
+                                    data-start="1350"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="300"
+                                    style="z-index: 4; max-width: auto; max-height: auto; white-space:normal;">
+                                    <div class="op-2"></div>
+                                </div>
+                                <!-- Home Button -->
+                                <div class="tp-caption home-button sft fadeout"
+                                    data-x="center" 
+                                    data-y="400" 
+                                    data-speed="1200"
+                                    data-start="1550"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="300"
+                                    style="z-index: 4; max-width: auto; max-height: auto; white-space:normal;">
+                                    <div class="op-2"><a href="/rover.html" class="btn btn-primary btn-scroll">Range Rover Vogue</a></div>
+                                </div>
+
+                        </li>
+
+                        <!-- SLIDE 3 -->
+                        <li data-transition="fade" data-slotamount="7" data-masterspeed="2000" data-thumb="{% static 'zailer/img/backgrounds/bg-3.jpg' %}" data-delay="10000"  data-saveperformance="on" data-title="Range Rover Sport">
+                            <img src="{% static 'zailer/img/backgrounds/bg-3.jpg' %}" alt="1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+
+                                <!-- Home Heading -->
+                                <div class="tp-caption sft"
+                                    data-x="center"  
+                                    data-y="260"
+                                    data-speed="1200"
+                                    data-start="1100"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="300"
+                                    style="z-index: 4; max-width: auto; max-height: auto; white-space:normal;">
+                                    <h2 class="home-heading op-3">ИНДИВИДУАЛЬНО</h2>
+                                </div>
+                                <!-- Home Subheading -->
+                                <div class="tp-caption home-subheading sft fadeout"
+                                    data-x="center" 
+                                    data-y="360" 
+                                    data-speed="1200"
+                                    data-start="1350"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="300"
+                                    style="z-index: 4; max-width: auto; max-height: auto; white-space:normal;">
+                                    <div class="op-3">RANGE ROVER SPORT SVR-AUTOBIOGRAPHY 2015–2016</div>
+                                </div>
+                                <!-- Home Button -->
+                                <div class="tp-caption home-button sft fadeout"
+                                    data-x="center" 
+                                    data-y="400" 
+                                    data-speed="1200"
+                                    data-start="1550"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="300"
+                                    style="z-index: 4; max-width: auto; max-height: auto; white-space:normal;">
+                                    <div class="op-3"><a href="/rover.html" class="btn btn-primary btn-scroll">Range Rover Sport</a></div>
+                                </div>
+
+                        </li>
+
+                    </ul>
+                    <div class="tp-bannertimer"></div>	
+                </div>
+
+                <div class="home-bottom">
+                    <div class="container text-center">
+                        <div class="move bounce">
+                            <a href="#features" class="btn-scroll">GO!</a>
+                        </div>  
+                    </div> 
+                </div>
+
+            </div>	
+        </div>
+    </section>
+    {% endblock %}
+        <!-- End Home Revolution Slider Parallax Section -->
+    {% block content %}
+
+    
+    <!-- Start Features Section -->
+    <section id="features">
+        <div class="container">                      
+            <div class="row features-row wow fadeInUp">
+                
+                <div class="col-md-4 col-sm-12 feature-column">
+                    <div class="feature-icon">
+                        <i class="icon-eyeglasses size-2x highlight"></i>
+                        <i class="icon-eyeglasses back-icon"></i>
+                    </div>
+                    <div class="feature-info">
+                        <h4>Индивидуальные проекты</h4>
+                        <p class="feature-description">Рекламная заставка, отбрасывая подробности, концентрирует креативный конкурент, опираясь на опыт западных коллег.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 feature-column">
+                    <div class="feature-icon">
+                        <i class="icon-lock-open size-2x highlight"></i>
+                        <i class="icon-lock-open back-icon"></i>
+                    </div>
+                    <div class="feature-info">
+                        <h4>Подбор дисков и резины</h4>
+                        <p class="feature-description">Рекламная заставка, отбрасывая подробности, концентрирует креативный конкурент, опираясь на опыт западных коллег.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 feature-column">
+                    <div class="feature-icon">
+                        <i class="icon-energy size-2x highlight"></i>
+                        <i class="icon-energy back-icon"></i>
+                    </div>
+                    <div class="feature-info">
+                        <h4>Перешивка салона</h4>
+                        <p class="feature-description">Рекламная заставка, отбрасывая подробности, концентрирует креативный конкурент, опираясь на опыт западных коллег.</p>
+                    </div>
+                </div>
+                        
+            </div>   
+            
+            <div class="row wow fadeInUp">
+                
+                <div class="col-md-4 col-sm-12 feature-column">
+                    <div class="feature-icon">
+                        <i class="icon-settings size-2x highlight"></i>
+                        <i class="icon-settings back-icon"></i>
+                    </div>
+                    <div class="feature-info">
+                        <h4>Перекраска автомобиля</h4>
+                        <p class="feature-description">Рекламная заставка, отбрасывая подробности, концентрирует креативный конкурент, опираясь на опыт западных коллег.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 feature-column">
+                    <div class="feature-icon">
+                        <i class="icon-book-open size-2x highlight"></i>
+                        <i class="icon-book-open back-icon"></i>
+                    </div>
+                    <div class="feature-info">
+                        <h4>Увеличение мощности двигателя</h4>
+                        <p class="feature-description">Рекламная заставка, отбрасывая подробности, концентрирует креативный конкурент, опираясь на опыт западных коллег.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 feature-column">
+                    <div class="feature-icon">
+                        <i class="icon-support size-2x highlight"></i>
+                        <i class="icon-support back-icon"></i>
+                    </div>
+                    <div class="feature-info">
+                        <h4>Сервис</h4>
+                        <p class="feature-description">Рекламная заставка, отбрасывая подробности, концентрирует креативный конкурент, опираясь на опыт западных коллег.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!--End Features Section -->
+    
+    <!-- Start About Section --> 
+    <section id="about" class="parallax-section-1"> 
+        <div class="container">
+            
+        	<div class="counter-row row text-center wow fadeInUp">
+            	<div class="col-md-3 col-sm-6 fact-container">
+                	<div class="fact">
+                    	<span class="counter white">2940</span> 
+                        <h4>Готовые проекты</h4>
+                        <!--<p>Комментарий <span class="highlight">Текст</span> #1</p>-->
+                    </div>
+                </div>
+               
+            </div>    
+        </div>
+        <div class="container">
+            <div class="row">
+                
+                <!--<div class="col-md-6 text-left about-text">-->
+                <div>
+                    <h2 class="content-title white wow fadeInUp">О КОМПАНИИ ZAILER</h2>          
+                    <p class="grey wow fadeInUp">Компания Zailer была основана в 1998 году. История появления названия Zailer такова: компания названа в честь одного из основоположников автоспорта и формулы один в частности немецкого автогонщика Макса Зайлера.</p> 
+		            <p class="grey wow fadeInUp">В далёком 1921 году Макс Зайлер на автомобиле Mercedes 28/95ps оборудованным компрессором, взял на гонке за кубок и памятную табличку графа Флорио в Сицилии первое место. Это был первый в мире автомобиль, оборудованный компрессором типа Roots. В середине тридцатых годов Макс Зайлер покидает гоночное отделение и переходит в Штутгартскую штаб квартиру Даймлер-Крайслер, где продолжает трудиться в поте лица над улучшением W25C и Созданием легендарного автомобиля W170 и двигателя M136.</p>
+		            <p class="grey wow fadeInUp">В текущий момент компания Zailer является окрепшим игроком на рынке тюнинга для престижных автомобилей марки Mercedes-Benz. Обладающая всем необходимым для: тюнинга, индивидуального построения, создания офисов на колесах, создания мультимедиа комплексов и прочих услуг мира тюнинга. Компания Zailer является активным участником автосалонов и прочих выставок, посвящённых автомобилям и тюнингу.</p>
+
+                </div>
+                
+               
+
+        	</div>
+        </div>
+    </section>
+	<!-- End About Section -->
+    
+   
+    
+    <!-- Start Portfolio Section -->
+    <section id="auto" style="position: relative; margin-bottom: 10px;"> 
+        <div class="separator"></div>
+        <div class="container">
+            
+            <div class="col-md-12 text-center">
+                <h3 class="section-title wow fadeInUp">ТЮНИНГ</h3> 
+                <p class="subheading wow fadeInUp">Zailer работает с топовыми марками, придавая автомобилю идивидуальные черты <span class="highlight"></span>.</p>
+            </div>
+
+            <div id="filters-container-fullwidth" class="cbp-l-filters-alignCenter wow fadeInUp">
+                <div data-filter="*" class="cbp-filter-item-active cbp-filter-item has-not-sublevel">Все<div class="cbp-filter-counter"></div></div>
+                <div data-filter=".rover" data-toggle=".rover-model" class="cbp-filter-item has-sublevel">Range Rover<div class="cbp-filter-counter"></div></div>
+                <!--<div data-filter=".rover_vogue" class="cbp-filter-item">Range Rover Vogue <div class="cbp-filter-counter"></div></div>-->
+                <div data-filter=".maybach" class="cbp-filter-item has-not-sublevel">Maybach <div class="cbp-filter-counter"></div></div>
+                <!--<div data-filter=".porsche" class="cbp-filter-item">Porsche Cayenne <div class="cbp-filter-counter"></div></div>-->
+                
+                <div data-filter=".mercedes" class="cbp-filter-item has-not-sublevel">MERCEDES-BENZ <div class="cbp-filter-counter"></div></div>
+                <div data-filter=".toyota" class="cbp-filter-item  has-not-sublevel">Toyota <div class="cbp-filter-counter"></div></div>
+                <div data-filter=".lexus" class="cbp-filter-item  has-not-sublevel">Lexus <div class="cbp-filter-counter"></div></div>
+                <!--<div data-filter=".bmw" class="cbp-filter-item">BMW <div class="cbp-filter-counter"></div></div>-->
+                <div class="car-sublevels">
+                    <div class="row sublevel  rover-model">
+                        <div data-filter=".vogue" class="cbp-filter-item has-sublevel model-level" data-toggle=".rover-vogue-date">RANGE ROVER VOGUE</div>
+                        <div data-filter=".sport" class="cbp-filter-item has-sublevel model-level" data-toggle=".rover-sport-date">RANGE ROVER SPORT</div>
+                        <div data-filter=".discovery" class="cbp-filter-item has-sublevel model-level" data-toggle=".rover-discovery-date">RANGE ROVER DISCOVERY</div>
+                    </div>
+                    <div class="row sublevel rover-vogue-date">
+                        <div data-filter=".rrv09-12IIIR" class="cbp-filter-item date-level">2009 - 2012 III рестайлинг</div>
+                        <div data-filter=".rrv12IVR" class="cbp-filter-item date-level">2012 - н.в. IV рестайлинг</div>
+                        <div data-filter=".rrv16-17R" class="cbp-filter-item date-level">2016 - 2017 рестайлинг</div>
+                    </div>
+                    <div class="row sublevel rover-sport-date">
+                        <div data-filter=".rrs09-13IR" class="cbp-filter-item date-level">2009 - 2013 I рестайлинг</div>
+                        <div data-filter=".rrs13IIR" class="cbp-filter-item date-level">2013 - н.в. II рестайлинг</div>
+                    </div>
+                    <div class="row sublevel rover-discovery-date">
+                        <div data-filter=".rrd13IVR" class="cbp-filter-item date-level">2013 - н.в. IV рестайлинг</div>
+                        <div data-filter=".rrdS14" class="cbp-filter-item date-level">Sport 2014 - н.в.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="grid-container-fullwidth" class="cbp-l-grid-fullScreen">
+                <ul>   
+                    
+                 
+                    <!-- Начало Range Rover Sport -->
+                    {% for pitem in portfolioItems %}
+                        
+                        <li class="cbp-item effect effects {{pitem.mark_name}} {{pitem.model}} {{pitem.years}}">
+                            <div class="img">
+                                {{ pitem.name }}
+                                <img src="{% static pitem.img_url %}" class="img-responsive" alt="" />
+                                <a class="project-url cbp-singlePage" href="/project/{{pitem.id}}">
+                                    <div class="overlay">
+                                        <ul class="expand">
+                                            <li class="cbp-l-caption-title">{{ pitem.name }}</li>
+                                            <li class="cbp-l-caption-desc">{{ pitem.desc }}</li>
+                                            <!--li class="cbp-l-icon"><a href="{% static pitem.img_url %}" class="cbp-lightbox" data-title="Описние проекта"><i class="icon-magnifier"></i></a></li>
+                                            <li class="cbp-l-icon"><a href="{% static pitem.project_url %}"><i class="icon-link"></i></a></li-->
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                        </li> 
+                        
+                    {% endfor %}
+
+                  
+            <div class="cbp-l-loadMore-button">
+                <a href="ajax/loadMore.html" class="cbp-l-loadMore-button-link wow fadeInUp">Далее</a>
+            </div>
+            
+        </div>
+    </section>
+    <!-- End Portfolio Section -->            
+    
+    <!-- Start Get Connected -->
+    <section id="get-connected" class="parallax-section-4">
+        <div class="container"> 
+        	
+            <div class="col-md-12 text-center">
+                <h3 class="section-title white wow fadeInUp">Мы в соц.сетях.</h3> 
+                <p class="subheading grey wow fadeInUp">Подпишись <span class="highlight">на наши</span> новости!</p>
+            </div>
+            
+            <div class="row text-center wow fadeInUp">
+            	<ul class="connected-icons text-center">
+                    
+						<!--
+						<li class="connected-icon">
+                        <a href="#">
+                            <span class="icon ion-social-pinterest-outline size-6x"></span>
+                            <h4 class="white">Соц.сеть #1</h4>
+                            <span class="grey">Мы в соц.сетях. #1</span>
+                        </a>
+                    </li>
+                    
+                    <li class="connected-icon">
+                        <a href="#">
+                            <span class="icon icon-social-twitter size-6x"></span>
+                            <h4 class="white">Соц.сеть #2</h4>
+                            <span class="grey">Мы в соц.сетях. #2</span>
+                        </a>
+                    </li>
+                    
+                    -->
+                    
+                    <li class="connected-icon">
+                        <a href="#">
+                            <span class="icon icon-social-youtube size-6x"></span>
+                            <h4 class="white">Соц.сеть #1</h4>
+                            <span class="grey">Мы в соц.сетях. #1</span>
+                        </a>
+                    </li>
+                    
+                    <li class="connected-icon">
+                        <a href="#">
+                            <span class="icon ion-social-instagram-outline size-6x"></span>
+                            <h4 class="white">Соц.сеть #2</h4>
+                            <span class="grey">Мы в соц.сетях. #2</span>
+                        </a>
+                    </li>
+                    
+                    <li class="connected-icon">
+                        <a href="#">
+                            <span class="icon icon-social-facebook size-6x"></span>
+                            <h4 class="white">Соц.сеть #3</h4>
+                            <span class="grey">Мы в соц.сетях. #3</span>
+                        </a>
+                    </li>                            
+            	</ul>        
+        	</div>  
+            
+        </div>
+    </section>
+    <!-- End Get Connected -->                
+    
+    
+    
+    <!-- Start Clients Section -->   
+    <section id="clients">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-12 text-center">
+                    <h3 class="section-title wow fadeInUp">Наши партнеры.</h3>
+                    <p class="subheading wow fadeInUp">Имиджевая реклама, как следует из вышесказанного, многопланово продуцирует стратегический рыночный план.</p>
+                </div>
+                
+                <div class="clients">
+                    
+                    <div class="col-md-2 col-sm-3 col-xs-6 client wow fadeInUp">
+                        <a href="#">
+                            <div class="logo-dark">
+                                <img src="{% static 'zailer/img/clients/logo-1-dark.png' %}" class="img-responsive" alt="client">
+                            </div>
+                            <div class="logo-light">
+                                <img src="{% static 'zailer/img/clients/logo-1-light.png' %}" class="img-responsive" alt="client">
+                            </div>
+                        </a>    
+                    </div>
+                    
+                    <div class="col-md-2 col-sm-3 col-xs-6 client wow fadeInUp">
+                        <a href="#">
+                            <div class="logo-dark">
+                                <img src="{% static 'zailer/img/clients/logo-2-dark.png' %}" class="img-responsive" alt="client">
+                            </div>
+                            <div class="logo-light">
+                                <img src="{% static 'zailer/img/clients/logo-2-light.png' %}" class="img-responsive" alt="client">
+                            </div>
+                        </a>    
+                    </div>
+                    
+                    <div class="col-md-2 col-sm-3 col-xs-6 client wow fadeInUp">
+                        <a href="#">
+                            <div class="logo-dark">
+                                <img src="{% static 'zailer/img/clients/logo-3-dark.png' %}" class="img-responsive" alt="client">
+                            </div>
+                            <div class="logo-light">
+                                <img src="{% static 'zailer/img/clients/logo-3-light.png' %}" class="img-responsive" alt="client">
+                            </div>
+                        </a>    
+                    </div>
+                    
+                    <div class="col-md-2 col-sm-3 col-xs-6 client wow fadeInUp">
+                        <a href="#">
+                            <div class="logo-dark">
+                                <img src="{% static 'zailer/img/clients/logo-4-dark.png' %}" class="img-responsive" alt="client">
+                            </div>
+                            <div class="logo-light">
+                                <img src="{% static 'zailer/img/clients/logo-4-light.png' %}" class="img-responsive" alt="client">
+                            </div>
+                        </a>    
+                    </div>
+                    
+                    <div class="col-md-2 col-sm-3 col-xs-6 client wow fadeInUp">
+                        <a href="#">
+                            <div class="logo-dark">
+                                <img src="{% static 'zailer/img/clients/logo-5-dark.png' %}" class="img-responsive" alt="client">
+                            </div>
+                            <div class="logo-light">
+                                <img src="{% static 'zailer/img/clients/logo-5-light.png' %}" class="img-responsive" alt="client">
+                            </div>
+                        </a>    
+                    </div>
+                    
+                    <div class="col-md-2 col-sm-3 col-xs-6 client wow fadeInUp">
+                        <a href="#">
+                            <div class="logo-dark">
+                                <img src="{% static 'zailer/img/clients/logo-6-dark.png' %}" class="img-responsive" alt="client">
+                            </div>
+                            <div class="logo-light">
+                                <img src="{% static 'zailer/img/clients/logo-6-light.png' %}" class="img-responsive" alt="client">
+                            </div>
+                        </a>    
+                    </div>
+                                                
+                </div>                        
+                
+            </div>
+        </div>
+    </section>
+    <!-- End Clients Section -->        
+    
+    <!-- Start Testimonials Section -->   
+    <section id="testimonials" class="parallax-section-7">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-12 text-center">
+                    <h3 class="section-title white wow fadeInUp">Отзывы наших клиентов.</h3>
+                    <p class="subheading grey wow fadeInUp">Заголовок <span class="highlight">Текст</span> О нас</p>
+                </div>
+                
+                <div class="col-md-12 text-center wow fadeInUp">
+                    <div id="owl-testimonials" class="owl-carousel">
+                        
+                        <div>
+                            <div class="testimonial">
+                                <i class="icon-left ion-quote ion-2x highlight"></i>
+                                    <span> 
+                                        Рекламная заставка, отбрасывая подробности,<br>концентрирует креативный конкурент, опираясь на опыт западных коллег. Эволюция мерчандайзинга транслирует креативный поведенческий таргетинг.
+                                    </span>
+                                <i class="icon-right ion-quote ion-2x highlight"></i>
+                            </div>
+                            <div class="testimonial-name">
+                                <img src="{% static 'zailer/img/clients/client-1.png' %}" alt="client">
+                                <h4 class="white">Иван Дионтьев</h4>
+                                <a href="#">www.сайт.ru</a>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="testimonial">
+                                <i class="icon-left ion-quote ion-2x highlight"></i>
+                                    <span>
+                                        Ребрендинг консолидирует культурный имидж предприятия.<br>Идеология выстраивания бренда неверно тормозит креативный показ баннера.
+                                    </span>
+                                <i class="icon-right ion-quote ion-2x highlight"></i>
+                            </div>
+                            <div class="testimonial-name">
+                                <img src="{% static 'zailer/img/clients/client-2.png' %}" alt="client">
+                                <h4 class="white">Иван Дионтьев</h4>
+                                <a href="#">www.сайт.ru</a>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="testimonial">
+                                <i class="icon-left ion-quote ion-2x highlight"></i>
+                                    <span>
+                                        Лидерство в продажах редко соответствует рыночным ожиданиям.<br>Рекламная заставка экономит презентационный материал, учитывая современные тенденции.
+                                    </span>
+                                <i class="icon-right ion-quote ion-2x highlight"></i>
+                            </div>
+                            <div class="testimonial-name">
+                                <img src="{% static 'zailer/img/clients/client-3.png' %}" alt="client">
+                                <h4 class="white">Иван Дионтьев</h4>
+                                <a href="#">www.сайт.ru</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div> 
+                
+            </div>
+        </div>
+    </section>
+    <!-- End Testimonials Section -->
+    
+    <!-- Start Contact Form Section -->    
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-12">
+                    <h2 class="section-title wow fadeInUp">Обратная связь.</h2> 
+                </div>
+                
+                <div class="col-md-6 col-md-offset-3 text-center wow fadeInUp">
+                    <div id="message"></div>
+                    <form method="post" action="contact.php" name="contactform" id="contactform">
+                        <fieldset>
+                                <input name="name" type="text" id="name" placeholder="Введите Ваше Имя"/> 
+                                <input name="email" type="text" id="email" placeholder="Введите Ваш E-mail"/>  
+                                <input name="subject" type="text" id="subject" placeholder="Тема"/> 
+                        </fieldset>
+                        <fieldset> 
+                                <textarea name="comments" cols="40" rows="3" id="comments" placeholder="Сообщение"></textarea>
+                        </fieldset>
+                        <input type="submit" class="submit" id="submit" value="Отправить" />
+                    </form>
+                </div>  
+                
+                <div class="col-md-12 text-center wow fadeInUp" style="margin-top:20px;">
+                    <p>Свяжитесь с нами!</p>
+                    <h4></h4>
+                    <p>Россия<br>Москва, ул. Федоскинская, дом 12<br>8 (495) 723 28 23</p>
+                </div>
+                                         
+            </div>
+        </div>
+    </section>
+    <!-- End Contact Form Section -->
+    
+    <!-- Start Google Map Section -->
+    <div id="map">
+        
+        <div class="map-wrapper">
+            <div id="map-canvas" class="full-width" data-lat="55.783613" data-lng="37.708778" data-zoom="14">  </div>
+        </div>
+    </div>
+    <!-- End Google Map Section -->
+    {% endblock %}
+            
+            
+ 
