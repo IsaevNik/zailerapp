@@ -2,7 +2,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import PortfolioItem, ProjectImage, Project
+from .models import PortfolioItem, ProjectImage, Project, Service
 
 
 
@@ -36,5 +36,15 @@ class PortfolioItemAdmin(admin.ModelAdmin):
 	]
 	list_display = ('name', 'mark_name')
 
+class ServiceAdmin(admin.ModelAdmin):
+	pass
+	fieldsets = [
+		('Название', {'fields': ['name']}),
+		('Описание услуги', {'fields': ['description']}),
+		('Ссылка на фото', {'fields': ['img_url']}),
+	]
+	list_display = ('name',)
+
 admin.site.register(Project, ProjectAdmin)
 admin.site.register(PortfolioItem, PortfolioItemAdmin)
+admin.site.register(Service, ServiceAdmin)

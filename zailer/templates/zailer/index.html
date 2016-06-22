@@ -12,35 +12,15 @@
             <li class="dropdown">
                 <span class="dropdown-toggle" data-toggle="dropdown">Услуги<b class="caret"></b></span>
                 <ul class="dropdown-menu" role="menu">
-                    <!--<li class="active"><a href="#">Разработка</a></li>-->
-                    <li><a href="/service1.html">1</a></li>
-                    <li><a href="/service2.html">2</a></li>
-                    <li><a href="/service3.html">3</a></li> 
-                    <li><a href="/service4.html">4</a></li>
-                    <li><a href="/service5.html">5</a></li>
-                    <li><a href="/service6.html">6</a></li>
-                    <li><a href="/service6.html">7</a></li> 
-                    <li><a href="/service6.html">8</a></li>
-                    <li><a href="/service6.html">9</a></li>
-                    <li><a href="/service6.html">10</a></li>
-                    <li><a href="/service6.html">11</a></li> 
-                    <li><a href="/service6.html">12</a></li>
+                    {% for s_item in services_items %}
+                        <li>
+                            <a href="/service/{{s_item.id}}">{{s_item.name}}</a>
+                        </li>
+                    {% endfor %}
                 </ul>
             </li> 
             <li class="to-section"><a href="/auto">Авто в продаже</a></li>
-            <!--
-            <li class="dropdown">
-                <span class="dropdown-toggle" data-toggle="dropdown">Новости <b class="caret"></b></span>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a href="blog.html">Список новостей</a></li>
-                    <li><a href="blog-single.html">Описание новости</a></li>    
-            </li> 
-            -->
             <li class="to-section"><a href="#contact">Контакты</a></li>
-            <!--
-            <li><a class="social-icon" href="#"><i class="icon icon-social-twitter"></i></a></li>
-            <li><a class="social-icon" href="#"><i class="icon icon-social-facebook"></i></a></li>
-            -->
         </ul>
     </div><!-- /.navbar-collapse -->
     {% endblock %}
@@ -309,19 +289,6 @@
     <!-- Start About Section --> 
     <section id="about" class="parallax-section-1"> 
         <div class="container">
-            
-        	<div class="counter-row row text-center wow fadeInUp">
-            	<div class="col-md-3 col-sm-6 fact-container">
-                	<div class="fact">
-                    	<span class="counter white">2940</span> 
-                        <h4>Готовые проекты</h4>
-                        <!--<p>Комментарий <span class="highlight">Текст</span> #1</p>-->
-                    </div>
-                </div>
-               
-            </div>    
-        </div>
-        <div class="container">
             <div class="row">
                 
                 <!--<div class="col-md-6 text-left about-text">-->
@@ -418,221 +385,7 @@
             
         </div>
     </section>
-    <!-- End Portfolio Section -->            
-    
-    <!-- Start Get Connected -->
-    <section id="get-connected" class="parallax-section-4">
-        <div class="container"> 
-        	
-            <div class="col-md-12 text-center">
-                <h3 class="section-title white wow fadeInUp">Мы в соц.сетях.</h3> 
-                <p class="subheading grey wow fadeInUp">Подпишись <span class="highlight">на наши</span> новости!</p>
-            </div>
-            
-            <div class="row text-center wow fadeInUp">
-            	<ul class="connected-icons text-center">
-                    
-						<!--
-						<li class="connected-icon">
-                        <a href="#">
-                            <span class="icon ion-social-pinterest-outline size-6x"></span>
-                            <h4 class="white">Соц.сеть #1</h4>
-                            <span class="grey">Мы в соц.сетях. #1</span>
-                        </a>
-                    </li>
-                    
-                    <li class="connected-icon">
-                        <a href="#">
-                            <span class="icon icon-social-twitter size-6x"></span>
-                            <h4 class="white">Соц.сеть #2</h4>
-                            <span class="grey">Мы в соц.сетях. #2</span>
-                        </a>
-                    </li>
-                    
-                    -->
-                    
-                    <li class="connected-icon">
-                        <a href="#">
-                            <span class="icon icon-social-youtube size-6x"></span>
-                            <h4 class="white">Соц.сеть #1</h4>
-                            <span class="grey">Мы в соц.сетях. #1</span>
-                        </a>
-                    </li>
-                    
-                    <li class="connected-icon">
-                        <a href="#">
-                            <span class="icon ion-social-instagram-outline size-6x"></span>
-                            <h4 class="white">Соц.сеть #2</h4>
-                            <span class="grey">Мы в соц.сетях. #2</span>
-                        </a>
-                    </li>
-                    
-                    <li class="connected-icon">
-                        <a href="#">
-                            <span class="icon icon-social-facebook size-6x"></span>
-                            <h4 class="white">Соц.сеть #3</h4>
-                            <span class="grey">Мы в соц.сетях. #3</span>
-                        </a>
-                    </li>                            
-            	</ul>        
-        	</div>  
-            
-        </div>
-    </section>
-    <!-- End Get Connected -->                
-    
-    
-    
-    <!-- Start Clients Section -->   
-    <section id="clients">
-        <div class="container">
-            <div class="row">
-                
-                <div class="col-md-12 text-center">
-                    <h3 class="section-title wow fadeInUp">Наши партнеры.</h3>
-                    <p class="subheading wow fadeInUp">Имиджевая реклама, как следует из вышесказанного, многопланово продуцирует стратегический рыночный план.</p>
-                </div>
-                
-                <div class="clients">
-                    
-                    <div class="col-md-2 col-sm-3 col-xs-6 client wow fadeInUp">
-                        <a href="#">
-                            <div class="logo-dark">
-                                <img src="{% static 'zailer/img/clients/logo-1-dark.png' %}" class="img-responsive" alt="client">
-                            </div>
-                            <div class="logo-light">
-                                <img src="{% static 'zailer/img/clients/logo-1-light.png' %}" class="img-responsive" alt="client">
-                            </div>
-                        </a>    
-                    </div>
-                    
-                    <div class="col-md-2 col-sm-3 col-xs-6 client wow fadeInUp">
-                        <a href="#">
-                            <div class="logo-dark">
-                                <img src="{% static 'zailer/img/clients/logo-2-dark.png' %}" class="img-responsive" alt="client">
-                            </div>
-                            <div class="logo-light">
-                                <img src="{% static 'zailer/img/clients/logo-2-light.png' %}" class="img-responsive" alt="client">
-                            </div>
-                        </a>    
-                    </div>
-                    
-                    <div class="col-md-2 col-sm-3 col-xs-6 client wow fadeInUp">
-                        <a href="#">
-                            <div class="logo-dark">
-                                <img src="{% static 'zailer/img/clients/logo-3-dark.png' %}" class="img-responsive" alt="client">
-                            </div>
-                            <div class="logo-light">
-                                <img src="{% static 'zailer/img/clients/logo-3-light.png' %}" class="img-responsive" alt="client">
-                            </div>
-                        </a>    
-                    </div>
-                    
-                    <div class="col-md-2 col-sm-3 col-xs-6 client wow fadeInUp">
-                        <a href="#">
-                            <div class="logo-dark">
-                                <img src="{% static 'zailer/img/clients/logo-4-dark.png' %}" class="img-responsive" alt="client">
-                            </div>
-                            <div class="logo-light">
-                                <img src="{% static 'zailer/img/clients/logo-4-light.png' %}" class="img-responsive" alt="client">
-                            </div>
-                        </a>    
-                    </div>
-                    
-                    <div class="col-md-2 col-sm-3 col-xs-6 client wow fadeInUp">
-                        <a href="#">
-                            <div class="logo-dark">
-                                <img src="{% static 'zailer/img/clients/logo-5-dark.png' %}" class="img-responsive" alt="client">
-                            </div>
-                            <div class="logo-light">
-                                <img src="{% static 'zailer/img/clients/logo-5-light.png' %}" class="img-responsive" alt="client">
-                            </div>
-                        </a>    
-                    </div>
-                    
-                    <div class="col-md-2 col-sm-3 col-xs-6 client wow fadeInUp">
-                        <a href="#">
-                            <div class="logo-dark">
-                                <img src="{% static 'zailer/img/clients/logo-6-dark.png' %}" class="img-responsive" alt="client">
-                            </div>
-                            <div class="logo-light">
-                                <img src="{% static 'zailer/img/clients/logo-6-light.png' %}" class="img-responsive" alt="client">
-                            </div>
-                        </a>    
-                    </div>
-                                                
-                </div>                        
-                
-            </div>
-        </div>
-    </section>
-    <!-- End Clients Section -->        
-    
-    <!-- Start Testimonials Section -->   
-    <section id="testimonials" class="parallax-section-7">
-        <div class="container">
-            <div class="row">
-                
-                <div class="col-md-12 text-center">
-                    <h3 class="section-title white wow fadeInUp">Отзывы наших клиентов.</h3>
-                    <p class="subheading grey wow fadeInUp">Заголовок <span class="highlight">Текст</span> О нас</p>
-                </div>
-                
-                <div class="col-md-12 text-center wow fadeInUp">
-                    <div id="owl-testimonials" class="owl-carousel">
-                        
-                        <div>
-                            <div class="testimonial">
-                                <i class="icon-left ion-quote ion-2x highlight"></i>
-                                    <span> 
-                                        Рекламная заставка, отбрасывая подробности,<br>концентрирует креативный конкурент, опираясь на опыт западных коллег. Эволюция мерчандайзинга транслирует креативный поведенческий таргетинг.
-                                    </span>
-                                <i class="icon-right ion-quote ion-2x highlight"></i>
-                            </div>
-                            <div class="testimonial-name">
-                                <img src="{% static 'zailer/img/clients/client-1.png' %}" alt="client">
-                                <h4 class="white">Иван Дионтьев</h4>
-                                <a href="#">www.сайт.ru</a>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="testimonial">
-                                <i class="icon-left ion-quote ion-2x highlight"></i>
-                                    <span>
-                                        Ребрендинг консолидирует культурный имидж предприятия.<br>Идеология выстраивания бренда неверно тормозит креативный показ баннера.
-                                    </span>
-                                <i class="icon-right ion-quote ion-2x highlight"></i>
-                            </div>
-                            <div class="testimonial-name">
-                                <img src="{% static 'zailer/img/clients/client-2.png' %}" alt="client">
-                                <h4 class="white">Иван Дионтьев</h4>
-                                <a href="#">www.сайт.ru</a>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="testimonial">
-                                <i class="icon-left ion-quote ion-2x highlight"></i>
-                                    <span>
-                                        Лидерство в продажах редко соответствует рыночным ожиданиям.<br>Рекламная заставка экономит презентационный материал, учитывая современные тенденции.
-                                    </span>
-                                <i class="icon-right ion-quote ion-2x highlight"></i>
-                            </div>
-                            <div class="testimonial-name">
-                                <img src="{% static 'zailer/img/clients/client-3.png' %}" alt="client">
-                                <h4 class="white">Иван Дионтьев</h4>
-                                <a href="#">www.сайт.ru</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div> 
-                
-            </div>
-        </div>
-    </section>
-    <!-- End Testimonials Section -->
+    <!-- End Portfolio Section -->               
     
     <!-- Start Contact Form Section -->    
     <section id="contact">

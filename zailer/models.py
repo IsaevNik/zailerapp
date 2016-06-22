@@ -43,3 +43,13 @@ class ProjectImage(models.Model):
 
 	def __str__(self):
 		return self.img_url
+
+
+@python_2_unicode_compatible
+class Service(models.Model):
+	name = models.CharField(max_length=100)
+	description = models.TextField()
+	img_url = models.CharField(max_length=200)
+
+	def __str__(self):
+		return self.name

@@ -2125,8 +2125,8 @@ blockquote strong {
 /*----- Contact Form -----*/
 
 #contact{
-	padding-top: 90px;
-	padding-bottom: 80px;
+	padding-top: 25px;
+	padding-bottom: 60px;
 }
 #contact .section-title {
     font-size: 55px;

@@ -2,54 +2,14 @@
 {% load staticfiles %}
 
     {% block nav %}
+
+    {% include "zailer/nav.html" with services_items=services_items %}
 			
-    <div class="collapse navbar-collapse" id="main-nav">
-        <ul class="nav navbar-nav  navbar-right">
-            
-           <!--<li><a class="to-top"><a href="/index.html#">Главная</a></li>-->
-            <li class="to-section"><a href="/">Главная</a></li>
-            <li class="to-section"><a href="/#about">О компании</a></li>
-            <li class="to-section"><a href="/rover">Range Rover</a></li>
-            <li class="to-section"><a href="/#auto">Тюнинг</a></li>
-            
-            <li class="dropdown">
-                <span class="dropdown-toggle" data-toggle="dropdown">Услуги<b class="caret"></b></span>
-                <ul class="dropdown-menu" role="menu">
-                    <!--<li class="active"><a href="#">Разработка</a></li>-->
-                    <li><a href="/service1.html">1</a></li>
-                    <li><a href="/service2.html">2</a></li>
-                    <li><a href="/service3.html">3</a></li> 
-                    <li><a href="/service4.html">4</a></li>
-                    <li><a href="/service5.html">5</a></li>
-                    <li><a href="/service6.html">6</a></li>
-                    <li><a href="/service6.html">7</a></li> 
-                    <li><a href="/service6.html">8</a></li>
-                    <li><a href="/service6.html">9</a></li>
-                    <li><a href="/service6.html">10</a></li>
-                    <li><a href="/service6.html">11</a></li> 
-                    <li><a href="/service6.html">12</a></li>
-                </ul>
-            </li> 
-            <li class="to-section"><a href="/auto">Авто в продаже</a></li>
-            <!--
-            <li class="dropdown">
-                <span class="dropdown-toggle" data-toggle="dropdown">Новости <b class="caret"></b></span>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a href="blog.html">Список новостей</a></li>
-                    <li><a href="blog-single.html">Описание новости</a></li>    
-            </li> 
-            -->
-            <li class="to-section"><a href="/#contact">Контакты</a></li>
-            <!--
-            <li><a class="social-icon" href="#"><i class="icon icon-social-twitter"></i></a></li>
-            <li><a class="social-icon" href="#"><i class="icon icon-social-facebook"></i></a></li>
-            -->
-      </ul>
-    </div><!-- /.navbar-collapse -->
+    
     {% endblock %}
     {% block headerbackground %}    
-        <!-- Start Page Top -->  
-        <section id="page-top" style="height:400px">
+    <!-- Start Page Top -->  
+    <section id="page-top" style="height:400px">
         <div class="hero">
         
             <img src="{% static 'zailer/img/backgrounds/bg-shortcodes.jpg' %}" alt="hero">
@@ -60,8 +20,8 @@
             </div>
             
         </div>
-        </section>
-        <!-- End Page Top --> 
+    </section>
+    <!-- End Page Top --> 
     {% endblock %}
     {% block content %}    
         

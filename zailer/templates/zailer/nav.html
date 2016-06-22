@@ -1,0 +1,22 @@
+<div class="collapse navbar-collapse" id="main-nav">
+        <ul class="nav navbar-nav  navbar-right">
+            
+           <!--<li><a class="to-top"><a href="/index.html#">Главная</a></li>-->
+            <li class="to-section"><a href="/">Главная</a></li>
+            <li class="to-section"><a href="/#about">О компании</a></li>
+            <li class="to-section"><a href="/#auto">Тюнинг</a></li>
+            
+            <li class="dropdown">
+                <span class="dropdown-toggle" data-toggle="dropdown">Услуги<b class="caret"></b></span>
+                <ul class="dropdown-menu" role="menu">
+                    {% for s_item in services_items %}
+                        <li>
+                            <a href="/service/{{s_item.id}}">{{s_item.name}}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </li> 
+            <li class="to-section"><a href="/auto">Авто в продаже</a></li>
+            <li class="to-section"><a href="/#contact">Контакты</a></li>
+      </ul>
+    </div>

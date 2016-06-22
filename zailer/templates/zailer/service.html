@@ -1,0 +1,44 @@
+{% extends "zailer/base.html" %}
+{% load staticfiles %}
+
+    {% block nav %}
+
+    {% include "zailer/nav.html" with services_items=services_items%}
+            
+    
+    {% endblock %}
+    {% block headerbackground %}  
+
+    <section id="page-top" style="height:400px">
+        <div class="hero">
+        
+            <img src="{% static 'zailer/img/backgrounds/bg-shortcodes.jpg' %}" alt="hero">
+
+            <div class="page-top-title text-center">
+                <h2 class="white op-1">Услуги</h2>
+                <p class="home-subheading op-1">ZAILER - тюнинг ателье класса люкс</p>
+            </div>
+            
+        </div>
+    </section>
+        <!-- End Page Top --> 
+    {% endblock %}
+    {% block content %}   
+    <section id="blog">
+        <div class="container">
+            <div class="row">
+                
+                <!-- Blog Post -->
+                <div class="col-md-8"> 
+                    
+                    <div class="blog-post"> 
+                        <h3 class="blog-post-title"> {{service.name}} </a></h3>    
+                        </ul>   
+                        <img class="img-responsive blog-img" src="{% static service.img_url %}" alt="">
+                        <p> {{service.description}} <p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock %}

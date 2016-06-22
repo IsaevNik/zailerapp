@@ -4,23 +4,28 @@ from django.shortcuts import render, get_object_or_404, render_to_response
 from django.http import Http404, HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
 
-from .models import PortfolioItem, Project
+from .models import PortfolioItem, Project, Service
 
 # Create your views here.
 def index(request):
 	portfolioItems = PortfolioItem.objects.all()
-	return render(request, 'zailer/index.html', {'portfolioItems': portfolioItems})
+	services_items = Service.objects.all()
+	return render(request, 'zailer/index.html', {'portfolioItems': portfolioItems,
+												 'services_items': services_items})
 
 def auto(request):
-	return render(request, 'zailer/auto.html')
-
-def rover(request):
-	roverItems = PortfolioItem.objects.filter(mark_name='rover')
-	return render(request, 'zailer/rover.html', {'portfolioItems': roverItems})
+	services_items = Service.objects.all()
+	return render(request, 'zailer/auto.html',{'services_items': services_items})
 
 def project(request, project_id):
 	project = get_object_or_404(Project, pk=project_id)
-	return render(request, 'zailer/project2.html', {'project': project})
+	return render(request, 'zailer/project.html', {'project': project})
+
+def service(request, service_id):
+	service = get_object_or_404(Service, pk=service_id)
+	services_items = Service.objects.all()
+	return render(request, 'zailer/service.html', {'service': service,
+												    'services_items': services_items})
 
 '''	project = get_object_or_404(Project, pk=project_id) 
 def detail(request, question_id):

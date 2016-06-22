@@ -130,7 +130,7 @@
     ---------------------*/
     $("#map").gmap3({
         marker:{     
-        address:"Россия, Москва", 
+        address:"Россия, Москва, ул. Федоскинская, дом 12", 
         options:{ icon: "static/zailer/img/assets/marker.png"}},
         map:{
         options:{
