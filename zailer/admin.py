@@ -2,7 +2,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import PortfolioItem, ProjectImage, Project, Service, HomePageSliderItem
+from .models import PortfolioItem, ProjectImage, Project, Service, HomePageSliderItem, CarForSale, CarForSaleImage
 
 
 
@@ -10,6 +10,10 @@ from .models import PortfolioItem, ProjectImage, Project, Service, HomePageSlide
 # Register your models here.
 class ProjectImageInline(admin.TabularInline):
 	model = ProjectImage
+	extra = 1
+
+class CarForSaleImageInline(admin.TabularInline):
+	model = CarForSaleImage
 	extra = 1
 
 class ProjectAdmin(admin.ModelAdmin):
@@ -24,7 +28,6 @@ class ProjectAdmin(admin.ModelAdmin):
 	inlines = [ProjectImageInline]
 
 class PortfolioItemAdmin(admin.ModelAdmin):
-	pass
 	fieldsets = [
 		('Название', {'fields': ['name']}),
 		('Марка для фильтра(в нижнем регистре)', {'fields': ['mark_name']}),
@@ -48,14 +51,30 @@ class HomePageSliderItemAdmin(admin.ModelAdmin):
 	fieldsets = [
 		('Титул', {'fields': ['title']}),
 		('Подтитул', {'fields': ['subtitle']}),
+		('Номер по порядку (уникальный)', {'fields': ['order_number']}),
 		('Текст кнопки', {'fields': ['button_text']}),
 		('Ссылка на проект (project_url в Project)', {'fields': ['button_url']}),
 		('Ссылка на фото фона', {'fields': ['img_url']}),
 		('Подпись миниатюры при наведении на стрелки слайдера', {'fields': ['slide_title']}),
 	]
-	list_display = ('title', 'button_url')
+	list_display = ('title', 'order_number', 'button_url')
 
+class CarForSaleAdmin(admin.ModelAdmin):
+	fieldsets = [
+		('Марка', {'fields': ['mark']}),
+		('Модель', {'fields': ['model']}),
+		('Модификация', {'fields': ['modification']}),
+		('Описание авто', {'fields': ['description']}),
+		('Цена', {'fields': ['price']}),
+		('Контактные данные', {'fields': ['contact']}),
+	]
+	list_display = ('mark', 'model', 'modification', 'price', 'contact')
+	inlines = [CarForSaleImageInline]
+
+admin.site.register(CarForSale, CarForSaleAdmin)
 admin.site.register(Project, ProjectAdmin)
 admin.site.register(PortfolioItem, PortfolioItemAdmin)
 admin.site.register(Service, ServiceAdmin)
 admin.site.register(HomePageSliderItem, HomePageSliderItemAdmin)
+
+#

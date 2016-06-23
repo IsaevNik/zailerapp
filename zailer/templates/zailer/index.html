@@ -274,11 +274,11 @@
                         </li> 
                         
                     {% endfor %}
-
-                  
-            <div class="cbp-l-loadMore-button">
-                <a href="ajax/loadMore.html" class="cbp-l-loadMore-button-link wow fadeInUp">Далее</a>
+                </ul>
             </div>
+            <!--div class="cbp-l-loadMore-button">
+                <a href="ajax/loadMore.html" class="cbp-l-loadMore-button-link wow fadeInUp">Далее</a>
+            </div-->
             
         </div>
     </section>
@@ -295,7 +295,8 @@
                 
                 <div class="col-md-6 col-md-offset-3 text-center wow fadeInUp">
                     <div id="message"></div>
-                    <form method="post" action="contact.php" name="contactform" id="contactform">
+                    <form method="post" action="/sendemail/" name="contactform" id="contactform">
+                    {% csrf_token %}
                         <fieldset>
                                 <input name="name" type="text" id="name" placeholder="Введите Ваше Имя"/> 
                                 <input name="email" type="text" id="email" placeholder="Введите Ваш E-mail"/>  

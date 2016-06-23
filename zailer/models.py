@@ -67,6 +67,28 @@ class HomePageSliderItem(models.Model):
 	button_url = models.CharField(max_length=200)
 	img_url = models.CharField(max_length=200)
 	slide_title = models.CharField(max_length=50)
+	order_number = models.IntegerField(unique=True)
 
 	def __str__(self):
 		return self.title
+
+@python_2_unicode_compatible
+class CarForSale(models.Model):
+	mark = models.CharField(max_length=40)
+	model = models.CharField(max_length=40)
+	modification = models.CharField(max_length=40, blank=True)
+	description = models.TextField()
+	price = models.IntegerField()
+	contact = models.CharField(max_length=40)
+	
+	def __str__(self):
+		return " ".join([self.mark, self.model, self.modification])
+
+@python_2_unicode_compatible
+class CarForSaleImage(models.Model):
+	car_for_sale = models.ForeignKey(CarForSale, on_delete=models.CASCADE)
+	img_url = models.CharField(max_length=200)
+	is_preview = models.BooleanField(default=False)
+
+	def __str__(self):
+		return self.img_url

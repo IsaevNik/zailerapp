@@ -27,6 +27,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_SUBJECT_PREFIX = '[zailer.tuning]'
+EMAIL_HOST_USER = 'zailer.tuning.company@gmail.com'
+EMAIL_HOST_PASSWORD = 'K8h42oPz'
+EMAIL_USE_TLS = True
+
+MANAGERS = (('Nikita', 'isv.nikita@gmail.com'),)
 
 # Application definition
 
@@ -38,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -122,3 +131,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_URL = '/media/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'zailer', 'img')
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)

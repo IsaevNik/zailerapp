@@ -1,11 +1,11 @@
-
+{% load humanize %}
 {% load staticfiles %}
 
 <section id="project-page-title">
     <div class="container">
         <div class="row text-center" style="margin:100px 0 0 0;">
             <div class="col-lg-12">
-                <h2 class="project-title">{{project.name}}</h2>
+                <h2 class="project-title">{{car_item.car.mark}} {{car_item.car.model}} {{car_item.car.modification}}</h2>
             </div>
         </div>
     </div>
@@ -17,7 +17,7 @@
                
         <div class="col-lg-12">
             <div id="project-slider" class="owl-carousel">
-                {% for image in project.projectimage_set.all %}            
+                {% for image in car.carforsaleimage_set.all %}            
                 <div><img src="{% static image.img_url %}" class="img-responsive" /></div>
                 {% endfor %}
 
@@ -29,7 +29,7 @@
             <!--<div class="project-widget">-->
             <div class="project-info">
                 <h4>Описание проекта</h4>
-                <p>{{project.description}}</p><br>
+                <p>{{car.description}}</p><br>
                 <!--<a href="#" class="btn btn-primary btn-responsive">Подробнее</a>-->
             </div>
         
@@ -41,8 +41,8 @@
             <div class="project-info">
                 <h4>Информация</h4>
                             
-                <h5>Марка: <i>{{project.mark}}</i></h5>
-                <h5>Модель: <i>{{project.model}}</i></h5>
+                <h5>Цена: <label>{{car.price | intcomma}} р</label></h5>
+                <h5>Контакты: <label>{{car.contact}}</label></h5>
             </div>
                       
             

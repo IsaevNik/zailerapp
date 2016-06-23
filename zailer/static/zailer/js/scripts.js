@@ -501,24 +501,38 @@ Portfolio
 })(jQuery, window, document);
 
 jQuery(document).ready(function($) {
+    var successMessage = $('<div class="alert alert-success"></div>')
+        .append('<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>')
+        .append('<strong>Отлично! </strong> Ваше сообщение отправлено');
+
+    function errorMessage(text_str, text_sm){
+        var errorElement = $('<div class="alert alert-danger"></div>')
+        .append('<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>')
+        .append('<strong>'+text_str+'</strong>'+text_sm);
+
+        return errorElement;
+    }
 
     $("#contactform").submit(function() {
-        var str = $(this).serialize();
-
         $.ajax({
-            type: "POST",
-            url: "contact.php",
-            data: str,
+            type: $(this).attr('method'),
+            url: $(this).attr('action'),
+            data: $(this).serialize(),
+
             success: function(msg) {
                 if(msg == 'OK') {
                     result = '<div class="notification_ok">Ваше сообщение было отправлено</div>';
                     $(".loader").hide();
+                    $('#contactform')[0].reset();
+                    $('#message').html(successMessage);
                 } else {
-                    result = msg;
+                    $('#message').html(errorMessage("Ошибка!"," Ваше письмо не доставлено. Повторите отправку немного позже!"));
                 }
-                $('#message').html(result);
+                
             }
         });
         return false;
     });
+
+
 });
