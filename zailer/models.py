@@ -16,9 +16,11 @@ class PortfolioItem(models.Model):
 	years = models.CharField(max_length=20, blank=True)
 	desc = models.CharField(max_length=50, blank=True)
 	img_url = models.CharField(max_length=200)
+	pub_date = models.DateTimeField('date published', default=timezone.now)
 
 	def __str__(self):
 		return self.name
+
 
 @python_2_unicode_compatible
 class Project(models.Model):
@@ -31,10 +33,12 @@ class Project(models.Model):
 	mark = models.CharField(max_length=40)
 	model = models.CharField(max_length=200)
 	description = models.TextField()
-	video_url = models.CharField(max_length=200, blank=True)
 
 	def __str__(self):
 		return self.name
+
+	def project_url(self):
+		return '/project/'+str(self.portfolio_item.id)
 
 @python_2_unicode_compatible
 class ProjectImage(models.Model):
@@ -53,3 +57,16 @@ class Service(models.Model):
 
 	def __str__(self):
 		return self.name
+
+
+@python_2_unicode_compatible
+class HomePageSliderItem(models.Model):
+	title = models.CharField(max_length=200)
+	subtitle = models.CharField(max_length=200)
+	button_text = models.CharField(max_length=50)
+	button_url = models.CharField(max_length=200)
+	img_url = models.CharField(max_length=200)
+	slide_title = models.CharField(max_length=50)
+
+	def __str__(self):
+		return self.title

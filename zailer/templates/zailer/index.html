@@ -35,8 +35,9 @@
                 <div class="tp-banner">
                     <ul>
                         <!-- SLIDE 1 -->
-                        <li data-transition="fade" data-slotamount="7" data-masterspeed="2000" data-thumb="{% static 'zailer/img/backgrounds/bg-home-fullscreen.jpg' %}" data-delay="10000"  data-saveperformance="on" data-title="Range Rover">
-                            <img src="{% static 'zailer/img/backgrounds/bg-home-fullscreen.jpg' %}" alt="1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+                        {% for slider_item in slider_items %}
+                        <li data-transition="fade" data-slotamount="7" data-masterspeed="2000" data-thumb="{% static slider_item.img_url %}" data-delay="10000"  data-saveperformance="on" data-title="{{slider_item.slide_title}}">
+                            <img src="{% static slider_item.img_url %}" alt="1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
 
                                 <!-- Home Heading -->
                                 <div class="tp-caption sft"
@@ -51,7 +52,7 @@
                                     data-endelementdelay="0.1"
                                     data-endspeed="300"
                                     style="z-index: 4; max-width: auto; max-height: auto; white-space:normal;">
-                                    <h2 class="home-heading op-1">ПРЕМЬЕРА ОТ ZAILER</h2>
+                                    <h2 class="home-heading op-1">{{slider_item.title}}</h2>
                                 </div>
                                 <!-- Home Subheading -->
                                 <div class="tp-caption home-subheading sft "
@@ -66,7 +67,7 @@
                                     data-endelementdelay="0.1"
                                     data-endspeed="300"
                                     style="z-index: 4; max-width: auto; max-height: auto; white-space:normal;">
-                                    <div class="op-1">Рейстайлинг Range Rover Vogue 2016-2017</div>
+                                    <div class="op-1">{{slider_item.subtitle}}</div>
                                 </div>
                                 <!-- Home Button -->
                                 <div class="tp-caption home-button sft fadeout"
@@ -81,115 +82,11 @@
                                     data-endelementdelay="0.1"
                                     data-endspeed="300"
                                     style="z-index: 4; max-width: auto; max-height: auto; white-space:normal;">
-                                    <div class="op-1"><a href="/rover" class="btn btn-primary btn-scroll">Range Rover</a></div>
+                                    <div class="op-1"><a href="{{slider_item.button_url}}" class="btn btn-primary cbp-singlePage">{{slider_item.button_text}}</a></div>
                                 </div>
 
                         </li>
-
-                        <!-- SLIDE 2 -->
-                        <li data-transition="fade" data-slotamount="7" data-masterspeed="2000" data-thumb="{% static 'zailer/img/backgrounds/bg-1.jpg' %}" data-delay="10000"  data-saveperformance="on" data-title="Range Rover Vogue">
-                            <img src="{% static 'zailer/img/backgrounds/bg-1.jpg' %}" alt="1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
-
-                                <!-- Home Heading -->
-                                <div class="tp-caption sft"
-                                    data-x="center"  
-                                    data-y="260"
-                                    data-speed="1200"
-                                    data-start="1100"
-                                    data-easing="Power3.easeInOut"
-                                    data-splitin="none"
-                                    data-splitout="none"
-                                    data-elementdelay="0.1"
-                                    data-endelementdelay="0.1"
-                                    data-endspeed="300"
-                                    style="z-index: 4; max-width: auto; max-height: auto; white-space:normal;">
-                                    <h2 class="home-heading op-2">Range Rover Vogue <br> AUTOBIOGRAPHY 2016</h2>
-                                </div>
-                                <!-- Home Subheading -->
-                                <div class="tp-caption home-subheading sft fadeout"
-                                    data-x="center" 
-                                    data-y="360" 
-                                    data-speed="1200"
-                                    data-start="1350"
-                                    data-easing="Power3.easeInOut"
-                                    data-splitin="none"
-                                    data-splitout="none"
-                                    data-elementdelay="0.1"
-                                    data-endelementdelay="0.1"
-                                    data-endspeed="300"
-                                    style="z-index: 4; max-width: auto; max-height: auto; white-space:normal;">
-                                    <div class="op-2"></div>
-                                </div>
-                                <!-- Home Button -->
-                                <div class="tp-caption home-button sft fadeout"
-                                    data-x="center" 
-                                    data-y="400" 
-                                    data-speed="1200"
-                                    data-start="1550"
-                                    data-easing="Power3.easeInOut"
-                                    data-splitin="none"
-                                    data-splitout="none"
-                                    data-elementdelay="0.1"
-                                    data-endelementdelay="0.1"
-                                    data-endspeed="300"
-                                    style="z-index: 4; max-width: auto; max-height: auto; white-space:normal;">
-                                    <div class="op-2"><a href="/rover.html" class="btn btn-primary btn-scroll">Range Rover Vogue</a></div>
-                                </div>
-
-                        </li>
-
-                        <!-- SLIDE 3 -->
-                        <li data-transition="fade" data-slotamount="7" data-masterspeed="2000" data-thumb="{% static 'zailer/img/backgrounds/bg-3.jpg' %}" data-delay="10000"  data-saveperformance="on" data-title="Range Rover Sport">
-                            <img src="{% static 'zailer/img/backgrounds/bg-3.jpg' %}" alt="1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
-
-                                <!-- Home Heading -->
-                                <div class="tp-caption sft"
-                                    data-x="center"  
-                                    data-y="260"
-                                    data-speed="1200"
-                                    data-start="1100"
-                                    data-easing="Power3.easeInOut"
-                                    data-splitin="none"
-                                    data-splitout="none"
-                                    data-elementdelay="0.1"
-                                    data-endelementdelay="0.1"
-                                    data-endspeed="300"
-                                    style="z-index: 4; max-width: auto; max-height: auto; white-space:normal;">
-                                    <h2 class="home-heading op-3">ИНДИВИДУАЛЬНО</h2>
-                                </div>
-                                <!-- Home Subheading -->
-                                <div class="tp-caption home-subheading sft fadeout"
-                                    data-x="center" 
-                                    data-y="360" 
-                                    data-speed="1200"
-                                    data-start="1350"
-                                    data-easing="Power3.easeInOut"
-                                    data-splitin="none"
-                                    data-splitout="none"
-                                    data-elementdelay="0.1"
-                                    data-endelementdelay="0.1"
-                                    data-endspeed="300"
-                                    style="z-index: 4; max-width: auto; max-height: auto; white-space:normal;">
-                                    <div class="op-3">RANGE ROVER SPORT SVR-AUTOBIOGRAPHY 2015–2016</div>
-                                </div>
-                                <!-- Home Button -->
-                                <div class="tp-caption home-button sft fadeout"
-                                    data-x="center" 
-                                    data-y="400" 
-                                    data-speed="1200"
-                                    data-start="1550"
-                                    data-easing="Power3.easeInOut"
-                                    data-splitin="none"
-                                    data-splitout="none"
-                                    data-elementdelay="0.1"
-                                    data-endelementdelay="0.1"
-                                    data-endspeed="300"
-                                    style="z-index: 4; max-width: auto; max-height: auto; white-space:normal;">
-                                    <div class="op-3"><a href="/rover.html" class="btn btn-primary btn-scroll">Range Rover Sport</a></div>
-                                </div>
-
-                        </li>
-
+                        {% endfor %}
                     </ul>
                     <div class="tp-bannertimer"></div>	
                 </div>
@@ -357,7 +254,7 @@
                     
                  
                     <!-- Начало Range Rover Sport -->
-                    {% for pitem in portfolioItems %}
+                    {% for pitem in portfolio_items %}
                         
                         <li class="cbp-item effect effects {{pitem.mark_name}} {{pitem.model}} {{pitem.years}}">
                             <div class="img">

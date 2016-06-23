@@ -2,7 +2,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import PortfolioItem, ProjectImage, Project, Service
+from .models import PortfolioItem, ProjectImage, Project, Service, HomePageSliderItem
 
 
 
@@ -18,10 +18,9 @@ class ProjectAdmin(admin.ModelAdmin):
         ('Описание проекта', {'fields': ['description']}),
         ('Модель', {'fields': ['model']}),
         ('Марка', {'fields': ['mark']}),
-        ('Видео (необязательное поле)', {'fields': ['video_url']}),
         ('Элемент в портфолио', {'fields': ['portfolio_item']}),
     ]
-	list_display = ('name', 'model', 'mark', 'portfolio_item')
+	list_display = ('name', 'project_url', 'portfolio_item')
 	inlines = [ProjectImageInline]
 
 class PortfolioItemAdmin(admin.ModelAdmin):
@@ -33,11 +32,11 @@ class PortfolioItemAdmin(admin.ModelAdmin):
 		('Версия модели (только для RR)', {'fields': ['years']}),
 		('Описание(показывается внизу на слайде)(необязательное поле)', {'fields': ['desc']}),
 		('Ссылка на фото', {'fields': ['img_url']}),
+		('Дата публикации элемента', {'fields': ['pub_date']})
 	]
 	list_display = ('name', 'mark_name')
 
 class ServiceAdmin(admin.ModelAdmin):
-	pass
 	fieldsets = [
 		('Название', {'fields': ['name']}),
 		('Описание услуги', {'fields': ['description']}),
@@ -45,6 +44,18 @@ class ServiceAdmin(admin.ModelAdmin):
 	]
 	list_display = ('name',)
 
+class HomePageSliderItemAdmin(admin.ModelAdmin):
+	fieldsets = [
+		('Титул', {'fields': ['title']}),
+		('Подтитул', {'fields': ['subtitle']}),
+		('Текст кнопки', {'fields': ['button_text']}),
+		('Ссылка на проект (project_url в Project)', {'fields': ['button_url']}),
+		('Ссылка на фото фона', {'fields': ['img_url']}),
+		('Подпись миниатюры при наведении на стрелки слайдера', {'fields': ['slide_title']}),
+	]
+	list_display = ('title', 'button_url')
+
 admin.site.register(Project, ProjectAdmin)
 admin.site.register(PortfolioItem, PortfolioItemAdmin)
 admin.site.register(Service, ServiceAdmin)
+admin.site.register(HomePageSliderItem, HomePageSliderItemAdmin)

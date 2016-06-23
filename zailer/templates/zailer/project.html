@@ -14,15 +14,7 @@
             
 <div class="container">
     <div class="row">
-        
-        {% if project.video_url %}
-        <div class="col-lg-12 project-video">
-            <div class="video-container">
-                <iframe src="{{ project.video_url }}"></iframe>
-            </div> 
-        </div>
-        {% endif %}
-        
+               
         <div class="col-lg-12">
             <div id="project-slider" class="owl-carousel">
                 {% for image in project.projectimage_set.all %}            

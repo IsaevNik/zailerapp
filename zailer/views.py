@@ -4,14 +4,16 @@ from django.shortcuts import render, get_object_or_404, render_to_response
 from django.http import Http404, HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
 
-from .models import PortfolioItem, Project, Service
+from .models import PortfolioItem, Project, Service, HomePageSliderItem
 
-# Create your views here.
+# Create your views here. order_by('-pub_date')
 def index(request):
-	portfolioItems = PortfolioItem.objects.all()
+	portfolio_items = PortfolioItem.objects.order_by('-pub_date')
 	services_items = Service.objects.all()
-	return render(request, 'zailer/index.html', {'portfolioItems': portfolioItems,
-												 'services_items': services_items})
+	slider_items = HomePageSliderItem.objects.all()
+	return render(request, 'zailer/index.html', {'portfolio_items': portfolio_items,
+												 'services_items': services_items,
+												 'slider_items': slider_items})
 
 def auto(request):
 	services_items = Service.objects.all()
