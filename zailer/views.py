@@ -44,11 +44,10 @@ def sendemail(request):
 	name = request.POST.get('name')
 	comments = request.POST.get('comments')
 	email = request.POST.get('email')
-	msg = u'name:{}\ncomments:{}\nemail:{}\n'.format(
+	msg = u'name: {}\ncomments: {}\nemail: {}\n'.format(
 													name,
 													comments,
 													email)
-
 	try:
 		mail_managers(subject, msg)
 	except Exception:	
