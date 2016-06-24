@@ -80,6 +80,7 @@ class CarForSale(models.Model):
 	description = models.TextField()
 	price = models.IntegerField()
 	contact = models.CharField(max_length=40)
+	year = models.IntegerField()
 	
 	def __str__(self):
 		return " ".join([self.mark, self.model, self.modification])

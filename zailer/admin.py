@@ -64,11 +64,12 @@ class CarForSaleAdmin(admin.ModelAdmin):
 		('Марка', {'fields': ['mark']}),
 		('Модель', {'fields': ['model']}),
 		('Модификация', {'fields': ['modification']}),
+		('Год', {'fields': ['year']}),
 		('Описание авто', {'fields': ['description']}),
 		('Цена', {'fields': ['price']}),
 		('Контактные данные', {'fields': ['contact']}),
 	]
-	list_display = ('mark', 'model', 'modification', 'price', 'contact')
+	list_display = ('mark', 'model', 'modification', 'year', 'price', 'contact')
 	inlines = [CarForSaleImageInline]
 
 admin.site.register(CarForSale, CarForSaleAdmin)

@@ -1,4 +1,5 @@
 {% extends "zailer/base.html" %}
+{% load humanize %}
 {% load staticfiles %}
 
     {% block nav %}
@@ -12,7 +13,7 @@
     <section id="page-top" style="height:400px">
         <div class="hero">
         
-            <img src="{% static 'zailer/img/backgrounds/bg-shortcodes.jpg' %}" alt="hero">
+            <img src="{% static 'zailer/img/backgrounds/auto-sale.jpg' %}" alt="hero" style="position:absolute; bottom:278px">
 
             <div class="page-top-title text-center">
                 <h2 class="white op-1">Автомобили в продаже</h2>
@@ -36,7 +37,10 @@
                         <a class="cbp-singlePage" href="/singlecar/{{car_item.car.id}}"><img class="img-responsive blog-img" src="{% static car_item.img_preview.img_url %}" alt=""></a>
                         <div class="column-info">
                             <h4 class="uppercase"><a class="cbp-singlePage" href="/singlecar/{{car_item.car.id}}">{{car_item.car.mark}} {{car_item.car.model}} {{car_item.car.modification}}</a></h4>                            
-                               
+                            <ul class="blog-post-info">
+                                <li><i class="ion-cash"></i> {{car_item.car.price | intcomma}} р</li><br>
+                                <li><i class="ion-clock"></i> {{car_item.car.year}} год </li>  
+                            </ul>   
                             <a class="btn btn-primary btn-xs cbp-singlePage" href="/singlecar/{{car_item.car.id}}">Подробнее</a>                                    
                         </div>
                     </div>

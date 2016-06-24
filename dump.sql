@@ -258,7 +258,7 @@ CREATE TABLE `django_migrations` (
   `name` varchar(255) NOT NULL,
   `applied` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -267,7 +267,7 @@ CREATE TABLE `django_migrations` (
 
 LOCK TABLES `django_migrations` WRITE;
 /*!40000 ALTER TABLE `django_migrations` DISABLE KEYS */;
-INSERT INTO `django_migrations` VALUES (1,'contenttypes','0001_initial','2016-06-22 00:23:55'),(2,'auth','0001_initial','2016-06-22 00:24:06'),(3,'admin','0001_initial','2016-06-22 00:24:07'),(4,'admin','0002_logentry_remove_auto_add','2016-06-22 00:24:08'),(5,'contenttypes','0002_remove_content_type_name','2016-06-22 00:24:09'),(6,'auth','0002_alter_permission_name_max_length','2016-06-22 00:24:09'),(7,'auth','0003_alter_user_email_max_length','2016-06-22 00:24:10'),(8,'auth','0004_alter_user_username_opts','2016-06-22 00:24:10'),(9,'auth','0005_alter_user_last_login_null','2016-06-22 00:24:11'),(10,'auth','0006_require_contenttypes_0002','2016-06-22 00:24:11'),(11,'auth','0007_alter_validators_add_error_messages','2016-06-22 00:24:11'),(12,'sessions','0001_initial','2016-06-22 00:24:13'),(13,'zailer','0001_initial','2016-06-22 00:24:14'),(14,'zailer','0002_auto_20160622_0330','2016-06-22 00:30:38'),(15,'zailer','0003_auto_20160622_0401','2016-06-22 01:01:58'),(16,'zailer','0004_auto_20160622_1734','2016-06-22 14:35:20'),(17,'zailer','0005_service','2016-06-22 20:14:20'),(18,'zailer','0006_auto_20160623_0951','2016-06-23 06:52:31'),(19,'zailer','0007_carforsale','2016-06-23 09:18:26'),(20,'zailer','0008_auto_20160623_1311','2016-06-23 10:11:48');
+INSERT INTO `django_migrations` VALUES (1,'contenttypes','0001_initial','2016-06-22 00:23:55'),(2,'auth','0001_initial','2016-06-22 00:24:06'),(3,'admin','0001_initial','2016-06-22 00:24:07'),(4,'admin','0002_logentry_remove_auto_add','2016-06-22 00:24:08'),(5,'contenttypes','0002_remove_content_type_name','2016-06-22 00:24:09'),(6,'auth','0002_alter_permission_name_max_length','2016-06-22 00:24:09'),(7,'auth','0003_alter_user_email_max_length','2016-06-22 00:24:10'),(8,'auth','0004_alter_user_username_opts','2016-06-22 00:24:10'),(9,'auth','0005_alter_user_last_login_null','2016-06-22 00:24:11'),(10,'auth','0006_require_contenttypes_0002','2016-06-22 00:24:11'),(11,'auth','0007_alter_validators_add_error_messages','2016-06-22 00:24:11'),(12,'sessions','0001_initial','2016-06-22 00:24:13'),(13,'zailer','0001_initial','2016-06-22 00:24:14'),(14,'zailer','0002_auto_20160622_0330','2016-06-22 00:30:38'),(15,'zailer','0003_auto_20160622_0401','2016-06-22 01:01:58'),(16,'zailer','0004_auto_20160622_1734','2016-06-22 14:35:20'),(17,'zailer','0005_service','2016-06-22 20:14:20'),(18,'zailer','0006_auto_20160623_0951','2016-06-23 06:52:31'),(19,'zailer','0007_carforsale','2016-06-23 09:18:26'),(20,'zailer','0008_auto_20160623_1311','2016-06-23 10:11:48'),(21,'zailer','0009_carforsale_year','2016-06-24 10:45:15');
 /*!40000 ALTER TABLE `django_migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -312,6 +312,7 @@ CREATE TABLE `zailer_carforsale` (
   `description` longtext NOT NULL,
   `price` int(11) NOT NULL,
   `contact` varchar(40) NOT NULL,
+  `year` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -322,7 +323,7 @@ CREATE TABLE `zailer_carforsale` (
 
 LOCK TABLES `zailer_carforsale` WRITE;
 /*!40000 ALTER TABLE `zailer_carforsale` DISABLE KEYS */;
-INSERT INTO `zailer_carforsale` VALUES (2,'BMW','X6','M','Захватывающий, динамичный, волнующий - именно так можно охарактеризовать облик нового BMW X6 M. Этот премиальный кроссовер расширяет грани воображения своим притягательным дизайном с мощными двойными воздухозаборниками, указывающими на властный характер. Мускулистая боковая линия эффектно завершается в привлекательный спойлер. Оптимизированные для обеспечения выдающихся качеств сцепления, стильные колеса с двойными спицами подчеркивают атлетичность и неуемную силу нового BMW X6 M. Внутри кроссовера все спроектировано для максимально эффективного взаимодействия водителя и автомобиля. Удобный 3-сципевый руль, анатомичные сиденья-ковши с потрясающей поддержкой тела, высококачественные отделочные материалы - все ориентировано на комфорт.',6680000,'+72221234556 Name');
+INSERT INTO `zailer_carforsale` VALUES (2,'BMW','X6','M','Захватывающий, динамичный, волнующий - именно так можно охарактеризовать облик нового BMW X6 M. Этот премиальный кроссовер расширяет грани воображения своим притягательным дизайном с мощными двойными воздухозаборниками, указывающими на властный характер. Мускулистая боковая линия эффектно завершается в привлекательный спойлер. Оптимизированные для обеспечения выдающихся качеств сцепления, стильные колеса с двойными спицами подчеркивают атлетичность и неуемную силу нового BMW X6 M. Внутри кроссовера все спроектировано для максимально эффективного взаимодействия водителя и автомобиля. Удобный 3-сципевый руль, анатомичные сиденья-ковши с потрясающей поддержкой тела, высококачественные отделочные материалы - все ориентировано на комфорт.',6680000,'+72221234556 Name',2012);
 /*!40000 ALTER TABLE `zailer_carforsale` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -483,7 +484,7 @@ CREATE TABLE `zailer_service` (
   `description` longtext NOT NULL,
   `img_url` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -505,4 +506,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-06-23 19:43:52
+-- Dump completed on 2016-06-24 15:13:13
