@@ -10,10 +10,10 @@
     {% endblock %}
     {% block headerbackground %}    
     <!-- Start Page Top -->  
-    <section id="page-top" style="height:400px">
+    <section id="page-top" style="height:600px">
         <div class="hero">
         
-            <img src="{% static 'zailer/img/backgrounds/auto-sale.jpg' %}" alt="hero" class="img-responsive">
+            <img src="{% static 'zailer/img/backgrounds/auto-sale.jpg' %}" alt="hero">
 
             <div class="page-top-title text-center">
                 <h2 class="white op-1">Автомобили в продаже</h2>
@@ -68,10 +68,20 @@
             
     {% block addscript %}
     <script src="{% static 'zailer/js/plugins/masonry.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
     <script>
     var msnry = new Masonry( '#masonry', {
       // options
     });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var $container = $("#masonry");
+            
+            $container.imagesLoaded(function () {
+                $container.masonry();
+            });
+        });
     </script>
     {% endblock %}
 	

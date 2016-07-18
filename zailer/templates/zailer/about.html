@@ -1,0 +1,45 @@
+{% extends "zailer/base.html" %}
+{% load staticfiles %}
+
+    {% block nav %}
+
+    {% include "zailer/nav.html" with services_items=services_items%}
+            
+    
+    {% endblock %}
+    {% block headerbackground %}  
+
+    <section id="page-top" style="height:600px">
+        <div class="hero">
+        
+            <img src="{% static 'zailer/img/backgrounds/bg-1.jpg' %}" alt="hero">
+
+            <div class="page-top-title text-center">
+                <h2 class="white op-1">О компании</h2>
+                <p class="home-subheading op-1">ZAILER - тюнинг ателье класса люкс</p>
+            </div>
+            
+        </div>
+    </section>
+        <!-- End Page Top --> 
+    {% endblock %}
+    {% block content %}   
+        <section id="about"> 
+        <div class="container">
+            <div class="row">
+                
+                <!--<div class="col-md-6 text-left about-text">-->
+                <div>
+                    <h2 class="content-title wow fadeInUp">О КОМПАНИИ ZAILER</h2>          
+                    <p class="wow fadeInUp">Компания Zailer была основана в 1998 году. История появления названия Zailer такова: компания названа в честь одного из основоположников автоспорта и формулы один в частности немецкого автогонщика Макса Зайлера.</p> 
+                    <p class="wow fadeInUp">В далёком 1921 году Макс Зайлер на автомобиле Mercedes 28/95ps оборудованным компрессором, взял на гонке за кубок и памятную табличку графа Флорио в Сицилии первое место. Это был первый в мире автомобиль, оборудованный компрессором типа Roots. В середине тридцатых годов Макс Зайлер покидает гоночное отделение и переходит в Штутгартскую штаб квартиру Даймлер-Крайслер, где продолжает трудиться в поте лица над улучшением W25C и Созданием легендарного автомобиля W170 и двигателя M136.</p>
+                    <p class="wow fadeInUp">В текущий момент компания Zailer является окрепшим игроком на рынке тюнинга для престижных автомобилей марки Mercedes-Benz. Обладающая всем необходимым для: тюнинга, индивидуального построения, создания офисов на колесах, создания мультимедиа комплексов и прочих услуг мира тюнинга. Компания Zailer является активным участником автосалонов и прочих выставок, посвящённых автомобилям и тюнингу.</p>
+
+                </div>
+                
+               
+
+            </div>
+        </div>
+    </section>
+    {% endblock %}

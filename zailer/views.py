@@ -37,16 +37,20 @@ def singlecar(request, car_id):
 	car = get_object_or_404(CarForSale, pk=car_id)
 	return render(request, 'zailer/singlecar.html', {'car': car})
 
+def about(request):
+	services_items = Service.objects.all()
+	return render(request, 'zailer/about.html', {'services_items': services_items})
+
 def sendemail(request):
 	if request.method == 'GET':
 		raise Http404
 	subject = request.POST.get('subject')
 	name = request.POST.get('name')
-	comments = request.POST.get('comments')
+	message = request.POST.get('message')
 	email = request.POST.get('email')
 	msg = u'name: {}\ncomments: {}\nemail: {}\n'.format(
 													name,
-													comments,
+													message,
 													email)
 	try:
 		mail_managers(subject, msg)

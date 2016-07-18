@@ -1,2 +1,3 @@
-zailer/static/
-
+zailer/static
+*.pyc
+zailer/settings.py
