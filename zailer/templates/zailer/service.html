@@ -35,7 +35,7 @@
                         <h3 class="blog-post-title"> {{service.name}} </a></h3>    
                         </ul>   
                         <img class="img-responsive blog-img" src="{% static service.img_url %}" alt="">
-                        <p> {{service.description}} <p>
+                        <p> {{service.description|linebreaksbr}} <p>
                     </div> 
                 </div>
             </div>

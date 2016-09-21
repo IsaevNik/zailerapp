@@ -94,7 +94,8 @@
             autoPlay : true,
             singleItem : true,
             pagination: true,
-            navigation: false,
+            navigation: true,
+            navigationText : ['<i class="icon ion-chevron-left"></i>','<i class="icon ion-chevron-right"></i>'],
         });
     });
     $("#owl-slider").owlCarousel({

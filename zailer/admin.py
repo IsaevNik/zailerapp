@@ -37,7 +37,8 @@ class PortfolioItemAdmin(admin.ModelAdmin):
 		('Ссылка на фото', {'fields': ['img_url']}),
 		('Дата публикации элемента', {'fields': ['pub_date']})
 	]
-	list_display = ('name', 'mark_name')
+	list_display = ('name','img_url','mark_name')
+	list_editable = ['img_url']
 
 class ServiceAdmin(admin.ModelAdmin):
 	fieldsets = [

@@ -164,7 +164,7 @@ p {
     top: 50%;
     left: 50%; 
     margin-top: -25px;
-    margin-left: -60px;
+    margin-left: -45px;
 }
 #contactform .loader {
     max-width: 50px;
@@ -491,6 +491,9 @@ div[class*="col"]:last-child .contacts-entry{border: none;}
 }
 .home-bottom a { 
     font-size: 22px;
+    position: relative;
+    right: 30px;
+    top: -20px;
 }
 
 /*----- Home Revolution Slider -----*/
@@ -1502,10 +1505,6 @@ blockquote strong {
 }
 
 
-.sublevel {
-     padding-right: 8%;
-}
-
 .sublevel-centr {
     padding-right: 0;
 }
@@ -1652,11 +1651,17 @@ blockquote strong {
     width: 34px;
     top: 8px;
 }
+.cbp-popup-singlePage .cbp-popup-next,
+.cbp-popup-singlePage .cbp-popup-prev {
+    display: none !important;
+}
+
 .cbp-popup-singlePage-counter {
     top: -24px;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 400;
     color: #1c1c1c;
+    display: none;
 }
 .cbp-popup-lightbox .cbp-popup-close, 
 .cbp-popup-lightbox .cbp-popup-next, 
@@ -3149,11 +3154,11 @@ ul.caret-list li:before {
 .owl-theme .owl-controls .owl-page span {
     cursor: pointer;
     display: inline-block;
-    background-color: #bbb;
+    background-color: #7a7a7a;
     border-color: #bbb;
     border: 2px solid transparent;
-    height: 12px;
-    width: 12px;
+    height: 14px;
+    width: 14px;
     border-radius: 50%;
     margin: 0 3px; 
     -moz-background-clip: content;
@@ -3166,7 +3171,7 @@ ul.caret-list li:before {
 }
 .owl-theme .owl-controls .owl-page.active span {
     border-color: #f0f0f0;
-    background-color: transparent;
+    background-color: #000;
 }
 .owl-carousel{
     overflow: hidden;
@@ -3176,7 +3181,7 @@ ul.caret-list li:before {
     background: rgba(0,0,0,.2);
     opacity: 0;
 }
-.owl-carousel:hover .owl-controls .owl-buttons div { 
+.owl-carousel .owl-controls .owl-buttons div { 
     opacity: 1;
 }
 .owl-prev:hover,
@@ -3202,12 +3207,14 @@ ul.caret-list li:before {
     height: 115px;
     width: 43px;
     line-height: 111px; 
+    top: 35%;
 }
 .owl-buttons .owl-next {
     right: -6px; 
     height: 115px;
     width: 43px; 
     line-height: 111px;
+    top: 35%;
 }
 .blog-post-fullwidth .owl-buttons .owl-prev,
 .blog-post-fullwidth .owl-buttons .owl-next {
@@ -3500,6 +3507,11 @@ pre {
     width: 100%; 
 }
 #masonry .blog-column .btn {
-    margin-top: 20px;
+    margin-top: 5px;
     margin-left: 0;
+}
+@media (min-width: 769px) {}
+    #preloader .loader{
+        left: 52%;
+    }
 }
